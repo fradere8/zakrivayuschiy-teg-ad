@@ -14,3 +14,8 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
 }
+
+.like-icon{
+  width: 100px;
+  height: 100px;
+}
