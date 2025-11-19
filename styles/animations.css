@@ -10,9 +10,22 @@
 
 */
 
-/* Базовые стили для иконки сердца */
-.like-icon {
-  cursor: pointer;
+@keyframes scale {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+@keyframes sparks {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .like-icon .core {
@@ -26,7 +39,7 @@
 }
 
 .like-icon .contour {
-  fill: var(--contour-color);
+  fill: var(--icon-contour);
   transition: fill 0.1s linear;
 }
 
@@ -34,73 +47,46 @@
   opacity: 0;
 }
 
-/* Состояние hover */
 .like-icon:hover .core {
-  fill: var(--contour-color);
+  fill: var(--icon-contour);
   transition: fill 0.3s linear;
 }
 
 .like-icon:hover .main-body {
-  fill: var(--contour-color);
+  fill: var(--icon-contour);
   transition: fill 0.3s 0.05s linear;
 }
 
-/* Состояние active (нажатие) */
 .like-icon:active .core {
-  fill: var(--animation-fill-color);
+  fill: var(--icon-main);
   transition: fill 0.3s linear;
 }
 
 .like-icon:active .main-body {
-  fill: var(--animation-fill-color);
+  fill: var(--icon-main);
   transition: fill 0.3s 0.05s linear;
 }
 
-
-
-/* Состояние is-liked (лайкнутое) */
 .like-icon.is-liked .core {
-  fill: var(--animation-fill-color);
+  fill: var(--icon-main);
   transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
-  fill: var(--animation-fill-color);
+  fill: var(--icon-main);
   transition: fill 0.3s 0.03s linear;
 }
 
 .like-icon.is-liked .contour {
-  fill: var(--animation-fill-color);
+  fill: var(--icon-main);
   transition: fill 0.3s 0.06s linear;
 }
 
-/* Keyframes для анимаций */
-@keyframes scale {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.25);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes sparks {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Применение анимаций для лайкнутого состояния */
 .like-icon.is-liked .heart {
-  animation: scale 0.3s 0.1s ease-in 1 alternate;
+  transform-origin: center;
+  animation: scale 0.3s 0.1s ease-in alternate;
 }
 
 .like-icon.is-liked .sparks {
-    animation: sparks 0.3s ease-in 0.3s;
+  animation: sparks 0.3s 0.3s ease-in alternate;
 }
