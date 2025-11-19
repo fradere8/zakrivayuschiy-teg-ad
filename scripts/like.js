@@ -39,3 +39,35 @@ function setButtonText(heart, button) {
     );
   }
 }
+
+// Обработчик для диалогового окна
+document.addEventListener('DOMContentLoaded', function() {
+    const saveButton = document.querySelector('.save-button');
+    const saveDialog = document.getElementById('save-dialog');
+    const closeDialogButton = document.querySelector('.save-dialog__button');
+    
+    if (saveButton && saveDialog) {
+        saveButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            saveDialog.showModal();
+        });
+    }
+    
+    if (closeDialogButton && saveDialog) {
+        closeDialogButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            saveDialog.close();
+        });
+    }
+    
+    // Обработчики для лайков (если их еще нет)
+    const likeButtons = document.querySelectorAll('.card__icon-button');
+    likeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const likeIcon = this.querySelector('.like-icon');
+            if (likeIcon) {
+                likeIcon.classList.toggle('is-liked');
+            }
+        });
+    });
+});
