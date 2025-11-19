@@ -217,6 +217,27 @@
   margin: auto;
 }
 
+.dialog[open] .floppy {
+  width: 39px;
+  height: 39px;
+}
+
+.dialog__title {
+  display: contents;
+}
+
+.dialog__button {
+  grid-column: 1 / -1;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-color);
+  border: 2px solid var(--accent-color);
+  font-family: var(--accent-font), fantasy;
+  font-size: 14px;
+  padding: 10px;
+  cursor: pointer;
+}
+
 
 
 .like-icon{
