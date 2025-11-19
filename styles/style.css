@@ -97,7 +97,14 @@
   object-position: center;
 }
 
-
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  padding: 25px;
+  font-size: 18px;
+  line-height: 21px;
+}
 
 .like-icon{
   width: 100px;
