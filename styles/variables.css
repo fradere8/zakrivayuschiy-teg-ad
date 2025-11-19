@@ -15,6 +15,8 @@
   --animation-fill-color: #FF0000;
   --button-text-color: #fff;
   --shadow-color: #000000;
+  --active-heart: #ff0000;
+  --icon-main: currentColor;
   
   /* Ширины */
   --content-width: clamp(371px, 50%, 696px);

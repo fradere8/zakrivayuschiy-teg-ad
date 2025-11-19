@@ -38,6 +38,7 @@
 }
 
 .like-icon .sparks {
+  fill: var(--icon-main);
   opacity: 0;
 }
 
@@ -82,7 +83,9 @@
 }
 
 .like-icon.is-liked .sparks {
+  opacity: 0;
   animation: sparks 0.3s 0.3s ease-in alternate;
+  fill: var(--active-heart);
 }
 
 @keyframes scale {
