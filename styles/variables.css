@@ -1,25 +1,32 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
+  /* Шрифты */
   --main-font: 'Inter', sans-serif;
   --accent-font: 'PressStart2P', sans-serif;
+  
+  /* Веса шрифтов */
   --main-font-weight: 400;
-  --main-title-font-weight: 700;
+  --title-font-weight: 700;
+  
+  /* Цвета */
   --bg-color: #fff;
   --accent-color: #000000;
+  --contour-color: #000000;
+  --animation-fill-color: #FF0000;
   --button-text-color: #fff;
+  --shadow-color: #000000;
+  
+  /* Ширины */
+  --content-width: clamp(371px, 50%, 696px);
+  
+  /* Градиенты для фона */
+  --bg-gradient: 
+    repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(180deg, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(180deg, #e7e7e7 0.01%, #1a1a1a 100%);
+}
 
-/* Градиенты */
-  --gradient-repeating: 
-    repeating-linear-gradient(to right, #d3d3d3 0 2px, transparent 2px 4px),
-    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px);
-  --gradient-linear: linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a 100%);
-
-  /* Цвета иконок */
-  --icon-contour: #000000;
-  --icon-main: #FF0000;
-  --label-stroke-color: #fff;
-
-  /* Ширина контента */
-  --content-width: clamp(23.438rem, 16.285rem + 30.516vw, 43.75rem);
-} 
-
+.page {
+  font-family: var(--main-font);
+  font-variation-settings: 'wght' var(--main-font-weight);
+}
