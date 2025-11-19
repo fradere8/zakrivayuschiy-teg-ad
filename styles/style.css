@@ -238,7 +238,26 @@
   cursor: pointer;
 }
 
+.dialog__button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
 
+.dialog__button:hover::before {
+  transform: scaleX(1);
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
 
 .like-icon{
   width: 100px;
