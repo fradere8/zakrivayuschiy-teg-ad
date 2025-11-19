@@ -195,6 +195,15 @@
   min-height: 51px;
 }
 
+.floppy {
+  width: 21px;
+  height: 21px;
+  color: var(--button-text-color);
+  mix-blend-mode: difference;
+}
+
+
+
 .like-icon{
   width: 100px;
   height: 100px;
