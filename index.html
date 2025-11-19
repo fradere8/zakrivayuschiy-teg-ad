@@ -294,7 +294,7 @@
         </article>
       </section>
       
-      <button onclick="window['save-dialog'].showModal()" class="save-button" type="button">
+      <button onclick="document.getElementById('save-dialog').showModal()" class="save-button" type="button">
         <svg class="save-button__icon" width="21" height="21" viewBox="0 0 21 21" >
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
@@ -305,7 +305,7 @@
           <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <p class="save-dialog__text">Вставьте дискету, чтобы продолжить</p>
-        <button onclick="window['save-dialog'].close()" class="save-dialog__button" type="button" >
+        <button onclick="document.getElementById('save-dialog').close()" class="save-dialog__button" type="button">
           <span class="button__text">Oк</span>
         </button>
       </dialog>
