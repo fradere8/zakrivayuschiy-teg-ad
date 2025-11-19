@@ -13,8 +13,15 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  padding: 100px 0;
   font-family: var(--main-font), sans-serif;
   font-variation-settings: 'wght' var(--main-font-weight);
+  background: 
+    var(--gradient-repeating),
+    var(--gradient-linear);
+  background-size: cover;
+  background-attachment: fixed;
+
 }
 
 .like-icon{
