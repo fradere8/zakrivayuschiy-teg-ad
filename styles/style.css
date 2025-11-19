@@ -24,6 +24,21 @@
 
 }
 
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-block: 136px;
+  background-color: var(--bg-color);
+  border: 2px solid var(--accent-color);
+  font-family: var(--accent-font), sans-serif;
+  text-transform: uppercase;
+  margin: 0 auto;
+  width: var(--content-width);
+}
+
 .like-icon{
   width: 100px;
   height: 100px;
