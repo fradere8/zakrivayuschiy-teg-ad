@@ -77,6 +77,26 @@
   position: relative;
 }
 
+.card-image-label {
+  position: absolute;
+  z-index: 2;
+  top: 25px;
+  right: 25px;
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+  font-family: var(--accent-font), fantasy;
+  font-size: 14px;
+  text-shadow: -1px 0 var(--label-stroke-color), 0 1px var(--label-stroke-color), 1px 0 var(--label-stroke-color), 0 -1px var(--label-stroke-color);
+}
+
+.card-image-content {
+  display: block;
+  width: 100%;
+  height: 696px;
+  object-fit: cover;
+  object-position: center;
+}
+
 
 
 .like-icon{
