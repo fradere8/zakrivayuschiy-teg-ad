@@ -106,6 +106,16 @@
   line-height: 21px;
 }
 
+.card__button {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 25px 25px 0;
+  gap: 2px;
+}
+
+
+
 .like-icon{
   width: 100px;
   height: 100px;
