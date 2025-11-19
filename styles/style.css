@@ -56,6 +56,29 @@
   width: var(--content-width);
 }
 
+.card {
+  background-color: var(--bg-color);
+  border: 2px solid var(--accent-color);
+  width: 100%;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 21.78px;
+  font-variation-settings: 'wght' var(--title-font-weight);
+  padding-inline: 10px;
+  padding-block: 3px;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.card-image {
+  position: relative;
+}
+
+
+
 .like-icon{
   width: 100px;
   height: 100px;
