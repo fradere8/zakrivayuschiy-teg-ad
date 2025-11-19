@@ -160,6 +160,11 @@ main {
   color: var(--accent-color);
   mix-blend-mode: hard-light;
   opacity: 0.5;
+  text-shadow: 
+    1px 1px 0 #fff,
+    -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff;
 }
 
 @supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
@@ -167,14 +172,6 @@ main {
     -webkit-text-stroke: 1px #fff;
     text-shadow: none;
   }
-}
-
-.card__label {
-  text-shadow: 
-    1px 1px 0 #fff,
-    -1px -1px 0 #fff,
-    1px -1px 0 #fff,
-    -1px 1px 0 #fff;
 }
 
 .card__content {
@@ -287,14 +284,6 @@ main {
   mix-blend-mode: difference;
 }
 
-.floppy-icon {
-  width: 21px;
-  height: 21px;
-  position: relative;
-  z-index: 1;
-  mix-blend-mode: difference;
-}
-
 .save-button {
   position: relative;
   background-color: var(--bg-color);
@@ -352,60 +341,12 @@ main {
   line-height: 1.5;
 }
 
-.save-dialog__icon {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  inline-size: 39px;
-  block-size: 39px;
-  align-self: center;
-  color: var(--main-color, #000);
-}
-
 .save-dialog__button {
   grid-column: 1 / 3;
   grid-row: 2 / 3;
   inline-size: 100%;
   padding-block: 11px;
   text-transform: uppercase;
-}
-
-.dialog__button {
-  position: relative;
-  background-color: var(--bg-color);
-  border: 2px solid var(--accent-color);
-  font-family: var(--accent-font);
-  font-size: 14px;
-  line-height: 90%;
-  padding: 10px 20px;
-  text-transform: uppercase;
-  overflow: hidden;
-  cursor: pointer;
-  width: 100%;
-}
-
-.dialog__button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--accent-color);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.5s ease-in-out;
-}
-
-.dialog__button:hover::before {
-  transform: scaleX(1);
-}
-
-.dialog__button:focus {
-  outline: none;
-}
-
-.dialog__button:focus-visible {
-  box-shadow: 2px 2px 0 var(--accent-color);
 }
 
 @media (width <= 375px) {
