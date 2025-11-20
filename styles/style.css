@@ -21,7 +21,7 @@
 }
 
 .header {
-  padding-top: 102px;
+  padding-top: 100px;
 }
 
 .header-content {
@@ -89,15 +89,15 @@ main {
 
 .card__image1 {
   display: block;
-  width: 100%;
-  height: 696px;
   object-fit: cover;
+  width: 100%;
+  height: clamp(375px, 50vh, 696px);
 }
 
 .card__image2 {
   display: block;
   width: 100%;
-  height: 696px;
+  height: clamp(375px, 50vh, 696px);
   object-fit: cover;
   filter: saturate(0.25);
 }
@@ -105,7 +105,7 @@ main {
 .card__image3 {
   display: block;
   width: 100%;
-  height: 696px;
+  height: clamp(375px, 50vh, 696px);
   object-fit: cover;
   filter: brightness(200%) saturate(160%);
 }
@@ -113,7 +113,7 @@ main {
 .card__image4 {
   display: block;
   width: 100%;
-  height: 696px;
+  height: clamp(375px, 50vh, 696px);
   object-fit: cover;
   filter: hue-rotate(20deg);
 }
@@ -121,7 +121,7 @@ main {
 .card__image5 {
   display: block;
   width: 100%;
-  height: 696px;
+  height: clamp(375px, 50vh, 696px);
   object-fit: cover;
   filter: invert() contrast(0.6);
 }
@@ -129,7 +129,7 @@ main {
 .card__image6 {
   display: block;
   width: 100%;
-  height: 696px;
+  height: clamp(375px, 50vh, 696px);
   object-fit: cover;
   filter: sepia(110%);
 }
@@ -137,7 +137,7 @@ main {
 .card__image7 {
   display: block;
   width: 100%;
-  height: 696px;
+  height: clamp(375px, 50vh, 696px);
   object-fit: cover;
   filter: blur(1rem);
 }
@@ -145,7 +145,7 @@ main {
 .card__image8 {
   display: block;
   width: 100%;
-  height: 696px;
+  height: clamp(375px, 50vh, 696px);
   object-fit: cover;
   filter: blur(0.15rem) hue-rotate(80deg) sepia(40%) contrast(0.9) saturate(110%);
 }
@@ -372,6 +372,17 @@ main {
   .save-dialog[open] {
     max-inline-size: 341px;
     padding-inline: 40px;
+  }
+
+  .card__image1,
+  .card__image2,
+  .card__image3,
+  .card__image4,
+  .card__image5,
+  .card__image6,
+  .card__image7,
+  .card__image8 {
+    height: 375px;
   }
   
 }
